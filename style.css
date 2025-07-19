@@ -1,0 +1,143 @@
+/* =================== ESTILOS GENERALES =================== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 5;
+    padding: 6;
+    color: white; /* Color de texto por defecto */
+    background: linear-gradient(45deg, #035648, rgb(149, 127, 4), #023d2b, #6104e3); /* Gradiente multicolor */
+    background-size: 400% 400%; /* Aumenta el tamaño del gradiente para que pueda moverse */
+   /*animation: gradientAnimation 15s ease infinite; /* Animación para el gradiente */
+}
+
+/* Animación para el fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =================== SECCIÓN DE PERFIL =================== */
+.perfil-img {
+    width: 200px; /* Tamaño de la imagen del perfil */
+    height: 200px; /* Tamaño de la imagen del perfil */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+    border-radius: 50%; /* Hacerla circular */
+    border: 5px solid #323d01; /* Borde blanco alrededor de la imagen */
+    transition: transform 0.3s ease-in-out; /* Transición para el hover */
+}
+
+.perfil-img:hover {
+    transform: scale(1.1); /* Efecto de agrandado en hover */
+}
+
+/* =================== NAVBAR / MENÚ SUPERIOR =================== */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white; /* Color del texto en el menú */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #2575fc; /* Color al pasar el mouse sobre los enlaces */
+}
+
+/* =================== SECCIÓN ACERCA DE MÍ =================== */
+#about {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 100px; /* Para no solapar con el navbar */
+    transition: transform 0.3s ease-in-out;
+}
+
+#about:hover {
+    transform: translateY(-10px); /* Levantar el contenedor en hover */
+}
+
+/* =================== SECCIÓN HABILIDADES =================== */
+.skill-card {
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición para animación */
+}
+
+.skill-card:hover {
+    transform: scale(1.30); /* Agrandar la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(230, 255, 3, 0.542); /* Sombra al pasar el mouse */
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/* =================== SECCIÓN CONTACTO =================== */
+#contact {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 50px; /* Separar del contenido superior */
+}
+
+#contactForm .form-control {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo claro semi-transparente */
+    border: 1px solid #ccc;
+    color: white; /* Color de texto */
+}
+
+#contactForm button {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #6a11cb; /* Cambio de color al pasar el mouse */
+}
+
+/* =================== SECCIÓN GITHUB =================== */
+#github {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px; /* Separar del contenido superior */
+}
+
+#github a {
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#github a:hover {
+    background-color: #6a11cb; /* Cambio de color al pasar el mouse */
+}
+
+/* =================== FOOTER =================== */
+footer {
+    background-color: #022d0f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* =================== Efectos Generales =================== */
+html {
+    scroll-behavior: smooth;
+}

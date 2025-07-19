@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional - Antonio Ramirez Ramirez</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ================= NAVBAR / MENÚ SUPERIOR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home"> Antonio Ramirez Ramirez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Acerca de mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= SECCIÓN INICIO ================= -->
+    <section id="home" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
+        <!-- Imagen de perfil -->
+        <img src="PERFIL.jpg" alt="Foto de Tonito Ramírez" class="rounded-circle shadow-lg perfil-img mb-4">
+        <!-- Texto de bienvenida -->
+        <h1 class="text-white">¡Hola! Soy estudiante de Ingeniería en Sistemas</h1>
+    </section>
+
+    <!-- ================= SECCIÓN ACERCA DE MÍ ================= -->
+    <section id="about" class="container py-10 text-white">
+        <h2 class="text-center mb-4">Acerca de mí</h2>
+        <p>
+            Soy un apasionado estudiante de Ingeniería en Sistemas en la prestigiosa Universidad Mariano Gálvez de Guatemala, con sede en Sololá. 
+            Inicié mi camino en esta emocionante carrera en el año 2022 y, a la fecha, voy cumpliendo cuatro años de formación académica, 
+            sumergiéndome en el fascinante mundo del desarrollo web y las tecnologías de la información. 
+            Mi enfoque principal en este momento es el desarrollo web, donde busco constantemente aprender y aplicar 
+            las últimas tendencias y mejores prácticas para crear soluciones innovadoras y funcionales.
+        </p>
+    </section>
+
+    <!-- ================= SECCIÓN HABILIDADES ================= -->
+    <section id="skills" class="container py-20 text-white">
+        <h2 class="text-center mb-4">Habilidades</h2>
+        <div class="row g-4">
+            <!-- Cada tarjeta representa una habilidad -->
+            <div class="col-md-4">
+                <div class="card skill-card shadow h-100" data-skill="html">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">HTML</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card skill-card shadow h-100" data-skill="css">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CSS</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card skill-card shadow h-100" data-skill="sqlserver">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">SQL Server</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card skill-card shadow h-100" data-skill="csharp">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">C#</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card skill-card shadow h-100" data-skill="javascript">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">JavaScript</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card skill-card shadow h-100" data-skill="github">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">GitHub</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para mostrar descripciones largas -->
+    <div class="modal fade" id="skillModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="skillModalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="skillModalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SECCIÓN CONTACTO ================= -->
+    <section id="contact" class="container py-5 text-white">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <p class="text-center">
+            Tel: +502 4859-6289<br>
+            Email: <a href="mailto:tonoramirezrr90@gmail.com" class="text-white">tonoramirezrr90@gmail.com</a>
+        </p>
+        <!-- Formulario de contacto -->
+        <form id="contactForm" class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+        <!-- Links sociales -->
+        <div class="text-center mt-4">
+            <a href="#" class="text-white me-3">Facebook</a>
+            <a href="#" class="text-white me-3">LinkedIn</a>
+            <a href="#" class="text-white">GitHub</a>
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN GITHUB ================= -->
+    <section id="github" class="container py-5 text-white">
+        <h2 class="text-center mb-4">GitHub</h2>
+        <p class="text-center">
+            <a href="https://github.com/tono2290A/AntoinoP.git" target="_blank" class="btn btn-outline-light">Ver proyecto en GitHub</a>
+        </p>
+    </section>
+
+    <!-- Bootstrap JS y archivo JS personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
